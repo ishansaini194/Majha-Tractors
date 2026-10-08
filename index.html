@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tractor Spares & Lubricants</title>
+  <meta name="description" content="Tractor spare parts, lubricants, engine oils, filters and accessories.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="brand-mark">🚜</span>
+        <span><strong>TRACTOR SPARES</strong><small>& LUBRICANTS</small></span>
+      </a>
+      <nav>
+        <a href="#catalog">Catalog</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="cart-btn" id="openCart">Cart <span id="cartCount">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">TRACTOR PARTS • OILS • FILTERS</span>
+          <h1>Reliable parts for the work that keeps your farm moving.</h1>
+          <p>Browse our spare parts, engine oils, lubricants and workshop essentials. Add what you need to your cart and send the order directly to us on WhatsApp.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#catalog">Browse Catalog</a>
+            <a class="btn secondary" id="heroWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp Us</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="tractor-art">🚜</div>
+          <div>
+            <strong>Need help finding a part?</strong>
+            <p>Send us the tractor model or part number on WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">OUR PRODUCTS</span>
+            <h2>Catalog</h2>
+          </div>
+          <div class="catalog-tools">
+            <input id="search" type="search" placeholder="Search product, brand or part number…">
+          </div>
+        </div>
+
+        <div id="categories" class="categories"></div>
+        <div id="productGrid" class="product-grid"></div>
+        <div id="emptyState" class="empty hidden">
+          <h3>No products found</h3>
+          <p>Try another search or category.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="info-section">
+      <div class="container info-grid">
+        <div>
+          <span class="eyebrow">WHY SHOP WITH US</span>
+          <h2>Simple ordering, local service.</h2>
+        </div>
+        <div class="info-points">
+          <div><b>01</b><span><strong>Wide selection</strong><br>Spare parts, oils, filters and more.</span></div>
+          <div><b>02</b><span><strong>Easy ordering</strong><br>Build your cart and send it through WhatsApp.</span></div>
+          <div><b>03</b><span><strong>Part identification</strong><br>Send a model or part number if you need help.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-card">
+        <div>
+          <span class="eyebrow">CONTACT</span>
+          <h2>Need a part quickly?</h2>
+          <p>Message us on WhatsApp for availability, pricing or help identifying a part.</p>
+        </div>
+        <a class="btn primary" id="contactWhatsApp" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Tractor Spares & Lubricants</span>
+      <span>Built for simple WhatsApp ordering.</span>
+    </div>
+  </footer>
+
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart" class="icon-btn" aria-label="Close">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div id="cartFooter" class="cart-footer"></div>
+  </aside>
+  <div id="overlay" class="overlay"></div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
